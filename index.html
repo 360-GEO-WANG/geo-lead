@@ -783,6 +783,30 @@ footer .line{height:1px;background:var(--line2);margin:0 0 16px}
 
 <div class="toast" id="toast" data-page-node-id="jZ3RQsfxPOUXCqTqncjxxt">已复制</div>
 
+<script src="./wbc.js"></script>
+<script>
+/* 云端留资：客户提交后写入云数据库，商务可随时查询/导出 */
+const CLOUD = {
+  endpoint: 'https://geo-lead-hub.app.workbuddy.host',
+  publishableKey: 'wbpk_J50R0JlaLqf7nmcjVvhQCA_xH28rVanaeF9kJSbva1qfS3HVEsnsY4F'
+};
+let cloudDB = null;
+try {
+  cloudDB = WorkBuddyCloud.createWorkBuddyCloud({
+    endpoint: CLOUD.endpoint,
+    publishableKey: CLOUD.publishableKey
+  }).database;
+} catch (e) { console.warn('cloud init failed', e); }
+
+function saveLead(row) {
+  if (!cloudDB) return Promise.resolve(false);
+  return cloudDB.from('leads').insert(row).then(({ error }) => {
+    if (error) { console.warn('lead save failed', JSON.stringify(error)); return false; }
+    return true;
+  }).catch((e) => { console.warn('lead save error', String(e && e.message || e)); return false; });
+}
+</script>
+
 <script>
 /* =========================================================
    可改区域：品牌信息集中在这里，其余不用动
@@ -1048,6 +1072,17 @@ $('#submitBtn').addEventListener('click', () => {
   $('#formSuccess').classList.add('show');
 
   $('#formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  // 云端留资：后台可查（写失败不影响客户复制咨询单的主流程）
+  saveLead({
+    name: name,
+    company: company,
+    industry: interest,
+    contact: contact,
+    needs: needs.join('、') || null,
+    score: lastScore,
+    source: (location.host ? location.host : 'local') + (lastGrade ? ' | ' + lastGrade : '')
+  });
 });
 
 $('#copyLead').addEventListener('click', () => {
