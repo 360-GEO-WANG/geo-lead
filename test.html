@@ -1,0 +1,10 @@
+<!DOCTYPE html><meta charset="utf-8"><title>e2e</title>
+<script src="./wbc.js"></script><script>
+window.__r=[];
+const db = WorkBuddyCloud.createWorkBuddyCloud({
+  endpoint: 'https://geo-lead-hub.app.workbuddy.host',
+  publishableKey: 'wbpk_J50R0JlaLqf7nmcjVvhQCA_xH28rVanaeF9kJSbva1qfS3HVEsnsY4F'
+}).database;
+db.from('leads').insert({name:'E2E线上测试',company:'live-origin-check',contact:'e2e-live-001',industry:'',needs:null,score:null,source:location.host})
+ .then(({error})=>{window.__r.push(error?('FAIL '+JSON.stringify(error)):'OK');document.title=window.__r[0];});
+</script>
