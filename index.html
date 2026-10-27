@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="Jrfh3GJ0BrBe2GoW0OCOmH">
+<head data-page-node-id="Fqismmw374J0afPtmZhGGy">
+<meta charset="UTF-8" data-page-node-id="lIY05waEASdOuJzBsPRYJb">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-page-node-id="E9KTUlPhaYf16bj9zhaOwm">
+<title>30秒测一测：AI 会不会推荐你的公司？</title>
+<meta name="description" content="你的下一个客户，正在问 AI 该找谁。30 秒测出你的公司在 AI 眼里的位置，测完免费领《AI 可见度诊断报告》。360智见 GEO：GEO 优化 + AI 官网 + Agent 数字员工。" data-page-node-id="C7KBSBICMqGlZEVcbgXytR">
+<meta name="theme-color" content="#ffffff" data-page-node-id="nBfyCR1hqR0FmIKKIPKBr5">
+<style>
+/* ============ 基础变量 ============ */
+:root{
+  --ink:#0B1B18;
+  --ink2:#22403B;
+  --muted:#5E7A74;
+  --muted2:#8AA19B;
+  --line:#E3EBE8;
+  --line2:#F0F5F3;
+  --bg:#EDF4F2;
+  --card:#FFFFFF;
+  --brand:#0BA398;
+  --brand2:#0E8F86;
+  --brand-soft:#E6F6F3;
+  --brand-line:#C9E9E3;
+  --green:#2FA36B;
+  --green-soft:#EAF7F0;
+  --warn:#D93B3B;
+  --radius:18px;
+  --shadow-s:0 1px 2px rgba(11,27,24,.05), 0 4px 12px rgba(11,27,24,.04);
+  --shadow-m:0 2px 6px rgba(11,27,24,.05), 0 14px 36px rgba(11,27,24,.07);
+  --shadow-l:0 8px 24px rgba(11,163,152,.22);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:16px}
+.page{
+  max-width:480px;
+  margin:0 auto;
+  background:var(--card);
+  min-height:100vh;
+  box-shadow:0 0 80px rgba(11,27,24,.10);
+  position:relative;
+}
+.wrap{padding:0 22px}
+section{position:relative}
+.sec{padding:46px 0 0}
+
+/* ============ 文字体系 ============ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11.5px;font-weight:700;letter-spacing:.12em;
+  color:var(--brand);margin:0 0 12px;
+}
+.eyebrow::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--brand)}
+h1{font-size:30px;line-height:1.34;letter-spacing:-.02em;font-weight:800;margin:0}
+h2{font-size:23px;line-height:1.42;letter-spacing:-.015em;font-weight:800;margin:0 0 12px}
+h3{font-size:16px;line-height:1.5;font-weight:700;margin:0 0 6px}
+p{margin:0}
+.lead{font-size:15px;color:var(--muted);line-height:1.8}
+.small{font-size:12.5px;color:var(--muted2);line-height:1.7}
+
+/* ============ 顶栏 ============ */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 22px 4px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:14.5px;letter-spacing:-.01em}
+.logo-mark{
+  width:24px;height:24px;border-radius:7px;
+  background:linear-gradient(140deg,#12B5A6,#2FA36B);
+  display:grid;place-items:center;color:#fff;font-size:11px;font-weight:800;
+  box-shadow:0 3px 8px rgba(11,163,152,.28);
+}
+.logo-tool{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:999px;background:#fff}
+
+/* ============ Hero ============ */
+.hero{
+  padding:26px 0 0;
+  background:
+    radial-gradient(120% 80% at 82% -10%, #E4F7F2 0%, rgba(228,247,242,0) 60%),
+    radial-gradient(90% 60% at 0% 0%, #EAF6F0 0%, rgba(234,246,240,0) 55%);
+}
+.hero h1{margin-bottom:16px}
+.hero .lead{margin-bottom:24px}
+.hero .lead strong{color:var(--ink2);font-weight:700}
+.cta-row{display:flex;flex-direction:column;gap:10px}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  height:52px;border-radius:14px;font-size:16px;font-weight:700;
+  transition:transform .16s ease, box-shadow .2s ease;
+  width:100%;
+}
+.btn:active{transform:scale(.985)}
+.btn-primary{background:linear-gradient(135deg,#12B5A6 0%,#0B8F7A 100%);color:#fff;box-shadow:var(--shadow-l)}
+.btn-ghost{background:#fff;color:var(--ink2);border:1.5px solid var(--line)}
+.btn-sub{font-size:12px;color:var(--muted2);text-align:center;margin-top:12px}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:1px solid var(--line2);padding-top:20px}
+.stats div{text-align:center;position:relative}
+.stats div + div::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:1px;background:var(--line2)}
+.stats b{display:block;font-size:19px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats span{font-size:11.5px;color:var(--muted2)}
+
+/* ============ AI 对话示意 ============ */
+.chat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-m);overflow:hidden}
+.chat-head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line2);background:#FBFDFC}
+.chat-dots{display:flex;gap:4px}
+.chat-dots i{width:7px;height:7px;border-radius:50%;background:#DCE6E2;display:block}
+.chat-title{font-size:12px;color:var(--muted);font-weight:600}
+.chat-body{padding:16px 16px 18px}
+.msg-user{display:flex;justify-content:flex-end;margin-bottom:14px}
+.msg-user span{background:var(--brand);color:#fff;font-size:13.5px;line-height:1.6;padding:10px 14px;border-radius:14px 14px 4px 14px;max-width:88%}
+.msg-ai{display:flex;gap:9px}
+.ai-avatar{
+  flex:0 0 auto;width:26px;height:26px;border-radius:8px;
+  background:linear-gradient(140deg,#12B5A6,#0B8F7A);color:#fff;
+  display:grid;place-items:center;font-size:11px;font-weight:800;margin-top:2px;
+}
+.ai-bubble{font-size:13.5px;line-height:1.85;color:var(--ink2)}
+.ai-bubble p{margin:0 0 10px}
+.ai-bubble .name{font-weight:700;color:var(--brand)}
+.ai-bubble .src{display:block;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--muted2)}
+.absent{
+  margin-top:16px;display:flex;align-items:flex-start;gap:8px;
+  background:#FDF3F3;border:1px solid #F6DCDC;border-radius:12px;
+  padding:11px 13px;font-size:13px;color:var(--warn);line-height:1.65;font-weight:600;
+}
+.absent b{font-weight:800}
+
+/* ============ 四大难题 ============ */
+.pain{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.pain li{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line2);font-size:14.5px;line-height:1.7;color:var(--ink2)}
+.pain li:last-child{border-bottom:none}
+.pain b{display:block;font-size:14.5px;font-weight:800;margin-bottom:2px}
+.pain span.t{font-size:13px;color:var(--muted)}
+.pain .num{
+  flex:0 0 auto;width:22px;height:22px;border-radius:7px;background:var(--brand-soft);
+  color:var(--brand);font-size:11.5px;font-weight:800;display:grid;place-items:center;margin-top:2px;
+}
+
+/* ============ 三合一 ============ */
+.trio{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.trio-card{
+  border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow-s);
+  display:flex;gap:13px;align-items:flex-start;
+}
+.trio-ico{
+  flex:0 0 auto;width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(140deg,#12B5A6,#0B8F7A);color:#fff;
+  display:grid;place-items:center;font-size:13px;font-weight:800;
+  box-shadow:0 4px 10px rgba(11,163,152,.24);
+}
+.trio-card b{display:block;font-size:15px;font-weight:800;margin-bottom:2px}
+.trio-card .tag{
+  display:inline-block;font-size:11px;font-weight:700;color:var(--brand);
+  background:var(--brand-soft);padding:2px 8px;border-radius:6px;margin:3px 0 7px;
+}
+.trio-card span{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* ============ 能力清单 ============ */
+.cap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.cap-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 14px;box-shadow:var(--shadow-s)}
+.cap-card .ico{width:30px;height:30px;border-radius:9px;background:var(--brand-soft);display:grid;place-items:center;margin-bottom:9px}
+.cap-card .ico svg{width:16px;height:16px;stroke:var(--brand);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.cap-card b{display:block;font-size:13.5px;font-weight:700;line-height:1.45;margin-bottom:3px}
+.cap-card span{font-size:11.5px;color:var(--muted);line-height:1.6}
+.cap-card .quota{
+  display:inline-block;margin-top:7px;font-size:11px;font-weight:700;color:var(--green);
+  background:var(--green-soft);padding:2px 8px;border-radius:6px;font-variant-numeric:tabular-nums;
+}
+
+/* ============ 产品矩阵 ============ */
+.prod{display:flex;flex-direction:column;gap:11px}
+.prod-card{border:1.5px solid var(--line);border-radius:18px;padding:17px 16px;background:#fff;position:relative}
+.prod-card.hot{border-color:var(--brand);box-shadow:0 6px 22px rgba(11,163,152,.14)}
+.prod-badge{position:absolute;top:-10px;right:14px;background:var(--brand);color:#fff;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:7px;letter-spacing:.02em}
+.prod-h{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2px}
+.prod-h b{font-size:16px;font-weight:800}
+.prod-h span{font-size:11.5px;color:var(--muted2);font-weight:600}
+.prod-card .for{font-size:12.5px;color:var(--brand);font-weight:700;margin-bottom:8px}
+.prod-card p{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:9px}
+.prod-card ul{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-direction:column;gap:5px}
+.prod-card li{font-size:12.5px;color:var(--muted);line-height:1.65;padding-left:16px;position:relative}
+.prod-card li::before{content:"";position:absolute;left:2px;top:7px;width:6px;height:6px;border-radius:2px;background:var(--brand-soft);border:1.5px solid var(--brand)}
+.prod-cta{
+  display:block;width:100%;height:40px;border-radius:11px;font-size:13.5px;font-weight:700;
+  background:var(--brand-soft);color:var(--brand2);
+}
+.ind-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.ind-chip{font-size:11.5px;font-weight:600;color:var(--ink2);background:#F4F9F7;border:1px solid var(--line);padding:5px 11px;border-radius:999px}
+
+/* ============ 案例 ============ */
+.case{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow-s);margin-bottom:10px}
+.case-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.case-ind{font-size:11.5px;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:3px 9px;border-radius:7px}
+.case-dur{font-size:11.5px;color:var(--muted2)}
+.case-nums{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.cn{background:#F7FBF9;border-radius:12px;padding:10px 12px}
+.cn .k{font-size:11px;color:var(--muted2);margin-bottom:2px}
+.cn .v{font-size:18px;font-weight:800;color:var(--brand2);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.cn .d{font-size:10.5px;font-weight:700;color:var(--green)}
+.case-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-top:10px}
+.case-quote{margin-top:10px;padding:9px 12px;background:#FBFDFC;border-left:3px solid var(--brand-line);font-size:12.5px;color:var(--ink2);line-height:1.7;border-radius:0 10px 10px 0}
+
+/* ============ 资质 ============ */
+.auth{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.auth-card{background:#F7FBF9;border:1px solid var(--line2);border-radius:14px;padding:13px 14px}
+.auth-card b{display:block;font-size:12.5px;font-weight:800;line-height:1.55;color:var(--ink2);margin-bottom:3px}
+.auth-card span{font-size:11.5px;color:var(--muted);line-height:1.6}
+
+/* ============ 体检 ============ */
+.quiz-shell{
+  background:linear-gradient(165deg,#0E2B27 0%,#123C36 60%,#155248 100%);
+  border-radius:22px;padding:22px 18px 20px;color:#fff;position:relative;overflow:hidden;
+}
+.quiz-shell::after{
+  content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+  right:-90px;top:-110px;background:radial-gradient(circle,rgba(47,196,178,.5),transparent 70%);
+}
+.quiz-shell .eyebrow{color:#8FE0D4}
+.quiz-shell .eyebrow::before{background:#8FE0D4}
+.quiz-shell h2{color:#fff;margin-bottom:8px;position:relative;z-index:1}
+.quiz-shell .qs-sub{font-size:13px;color:#A8CCC5;margin-bottom:16px;position:relative;z-index:1}
+.qbar{height:4px;border-radius:4px;background:rgba(255,255,255,.16);overflow:hidden;margin-bottom:14px}
+.qbar i{display:block;height:100%;width:0%;border-radius:4px;background:linear-gradient(90deg,#57D9C8,#8FE0A8);transition:width .35s cubic-bezier(.4,0,.2,1)}
+.qmeta{display:flex;justify-content:space-between;font-size:11.5px;color:#93B8B1;margin-bottom:9px;font-variant-numeric:tabular-nums}
+.qtext{font-size:16px;font-weight:700;line-height:1.6;margin-bottom:14px;min-height:52px}
+.qopts{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.qopt{
+  width:100%;text-align:left;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);color:#EAF6F3;
+  padding:12px 14px;border-radius:12px;font-size:14px;line-height:1.5;
+  transition:transform .12s ease;
+}
+.qopt:active{transform:scale(.99)}
+.qopt.sel{background:#fff;color:var(--ink);border-color:#fff;font-weight:600}
+.qopt.dim{opacity:.45}
+
+.result-score{display:flex;align-items:center;gap:18px;margin-bottom:6px}
+.ring{position:relative;width:104px;height:104px;flex:0 0 auto}
+.ring svg{transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-size:26px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.ring .num i{font-style:normal;font-size:11px;color:#93B8B1;font-weight:600;display:block;margin-top:-2px}
+.result-txt b{display:block;font-size:19px;font-weight:800;margin-bottom:3px}
+.result-txt span{font-size:12.5px;color:#A8CCC5;line-height:1.65}
+.advice{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:8px}
+.advice li{display:flex;gap:9px;font-size:13px;line-height:1.7;color:#D9ECE7;background:rgba(255,255,255,.06);border-radius:11px;padding:11px 13px}
+.advice li::before{content:"";flex:0 0 auto;width:5px;height:5px;border-radius:50%;background:#8FE0A8;margin-top:8px}
+.quiz-cta{margin-top:16px;position:relative;z-index:1}
+.quiz-cta .btn{height:48px;font-size:15px;background:#fff;color:var(--brand2);box-shadow:0 8px 20px rgba(0,0,0,.22)}
+.quiz-restart{display:block;width:100%;text-align:center;font-size:12px;color:#93B8B1;margin-top:12px}
+
+/* ============ 表单 ============ */
+.form-card{border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow-m);padding:20px 18px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:12.5px;font-weight:700;color:var(--ink2);margin-bottom:6px}
+.field label i{font-style:normal;color:var(--warn);margin-left:2px}
+.field input,.field select,.field textarea{
+  width:100%;border:1.5px solid var(--line);border-radius:11px;
+  padding:11px 13px;background:#F8FBFA;color:var(--ink);outline:none;
+  transition:border-color .16s ease, background .16s ease;font-size:15px;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brand);background:#fff}
+.field input::placeholder,.field textarea::placeholder{color:#A2B3AE}
+.field select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4.5L6 8.5L10 4.5' stroke='%238AA19B' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:12.5px;padding:7px 12px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--muted);transition:all .15s ease}
+.chip.on{border-color:var(--brand);background:var(--brand-soft);color:var(--brand2);font-weight:700}
+.form-note{font-size:11.5px;color:var(--muted2);line-height:1.7;margin-top:11px;text-align:center}
+.err{font-size:12px;color:var(--warn);margin-top:6px;display:none}
+.err.show{display:block}
+
+/* ============ 成功 ============ */
+.success{display:none;text-align:center;padding:6px 0}
+.success.show{display:block}
+.ok-mark{width:52px;height:52px;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;margin:0 auto 12px}
+.ok-mark svg{width:24px;height:24px;stroke:var(--green);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.success h3{font-size:18px;margin-bottom:6px}
+.success p{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:14px}
+.lead-card{
+  background:#F8FBFA;border:1px dashed var(--brand-line);border-radius:13px;
+  padding:12px 13px;text-align:left;font-size:12.5px;line-height:1.85;color:var(--ink2);
+  white-space:pre-wrap;word-break:break-word;margin-bottom:12px;max-height:180px;overflow:auto;
+}
+.wechat-box{
+  background:linear-gradient(150deg,#EAF7F3,#E4F5F0);border:1px solid var(--brand-line);
+  border-radius:14px;padding:14px;margin-bottom:12px;
+}
+.wechat-box .k{font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.wechat-box .v{font-size:19px;font-weight:800;letter-spacing:.01em;color:var(--brand2);font-variant-numeric:tabular-nums}
+.copy-mini{
+  display:inline-flex;align-items:center;gap:5px;margin-top:8px;
+  font-size:12px;font-weight:700;color:var(--brand2);background:#fff;
+  border:1px solid var(--brand-line);padding:6px 12px;border-radius:999px;
+}
+.qr-wrap{
+  display:none;align-items:center;gap:14px;margin-top:12px;
+  padding-top:12px;border-top:1px dashed var(--brand-line);
+}
+.qr-wrap.show{display:flex}
+.qr-wrap img{width:96px;height:96px;border-radius:10px;background:#fff;border:1px solid var(--brand-line);flex:0 0 96px}
+.qr-wrap .qt{font-size:11.5px;color:var(--muted);line-height:1.7}
+.qr-wrap .qt b{display:block;font-size:12.5px;color:var(--ink2);margin-bottom:2px}
+
+/* ============ 页脚 ============ */
+footer{padding:40px 22px 96px;text-align:center}
+footer .fs{font-size:11px;color:var(--muted2);line-height:1.8}
+footer .line{height:1px;background:var(--line2);margin:0 0 16px}
+
+/* ============ 底部悬浮 ============ */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;
+  margin:0 auto;max-width:480px;width:100%;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  display:flex;gap:9px;
+  transform:translateY(110%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+}
+.sticky.show{transform:translateY(0)}
+.sticky .btn{height:46px;font-size:14.5px;border-radius:12px}
+.sticky .btn-ghost{flex:0 0 42%;border-width:1.5px}
+.toast{
+  position:fixed;left:50%;bottom:96px;transform:translate(-50%,16px);
+  background:rgba(11,27,24,.94);color:#fff;font-size:13px;font-weight:600;
+  padding:10px 18px;border-radius:11px;opacity:0;pointer-events:none;
+  transition:all .26s ease;z-index:99;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ============ 入场动画 ============ */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+}
+@media (min-width:520px){
+  h1{font-size:32px}
+}
+</style>
+</head>
+<body data-page-node-id="M0jfbXxoFFD90AJpPX4wOZ">
+<div class="page" data-page-node-id="NHMOpq8ilQGv1IwK03d4Wz">
+
+  <!-- ===== 顶栏 ===== -->
+  <div class="topbar" data-page-node-id="PslMK1CKEiISJlPebiw2Zp">
+    <div class="logo" data-page-node-id="tvXTaFGvRsrl7Icm8a28BM">
+      <span class="logo-mark" data-page-node-id="0x8OPvdi6THFLlkB4cU6Is">360</span>
+      <span data-page-node-id="ozJ7WBRskuEOeSBD2GiDPr">360智见 GEO</span>
+    </div>
+  </div>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero sec" data-page-node-id="oxAHInxD0kvkB8MLFWRwdc">
+    <div class="wrap" data-page-node-id="7e0krfFZC029Det3MB0x1J">
+      <p class="eyebrow" data-page-node-id="ZNfPkqsPX4AsvBhpRExouT">360智见 · 生成式引擎优化</p>
+      <h1 data-page-node-id="km7WUgtpgiyg66D1jUWMHA">你的下一个客户，<br data-page-node-id="Rr4WLr1b6ahmPjC4cASOSh">正在问 AI 该找谁。</h1>
+      <p class="lead" data-page-node-id="wb6QmO6OSYYPGqYfksGJ9o">
+        AI 只会说出三个名字——这三个名字里有没有你，<strong data-page-node-id="QcfJjlNUnHuXAkFNiq0AyZ">决定了他联系谁。</strong>
+        花 30 秒，测出你的公司在 AI 眼里的位置。
+      </p>
+      <div class="cta-row" data-page-node-id="O8XFElsXWJTslPXbyWxSe1">
+        <button class="btn btn-primary" data-scroll="#check" data-page-node-id="sr9TSRFsNCtaIBcuH4OQ6G">免费测：AI 会推荐你的公司吗</button>
+        <button class="btn btn-ghost" data-scroll="#apply" data-page-node-id="uxU8dFhkLRBg1YTQHaVHuY">在线咨询顾问</button>
+      </div>
+      <p class="btn-sub" data-page-node-id="20l7ZfyumXak1q4BL43l3M">30 秒出结果 · 测完免费领《AI 可见度诊断报告》</p>
+
+      <div class="stats" data-page-node-id="D9MdOWNdJGDyCUAFnZmLDB">
+        <div data-page-node-id="VQfkMibgaDu2FanDGjlEnb"><b data-page-node-id="rGw4nSYQU45Fx9yQfPavEO">3000+</b><span data-page-node-id="Q7VOiMKCcJs48DMdBXVxCv">GEO 客户实践</span></div>
+        <div data-page-node-id="3EkYxfv68sQq2cPKfukCgD"><b data-page-node-id="wPnvPUD38azkAWqv7OFI94">20 年+</b><span data-page-node-id="6R5YtbHoa4BNcAKJvfaXmv">搜索与安全积累</span></div>
+        <div data-page-node-id="XKChjeqiAhXzSB8HHTkC6F"><b data-page-node-id="COFinCTw4HC7nDuWqZvy0s">百万+</b><span data-page-node-id="lFAwinywmJA1KkiMAlUFn5">企业服务经验</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI 对话示意 ===== -->
+  <section class="sec" data-page-node-id="EBxDR4eD6FJlemxPpL7CuF">
+    <div class="wrap" data-page-node-id="S4XtOdopFRRytB2AkkuB02">
+      <p class="eyebrow" data-page-node-id="vR2M0HWWgQHZiR0xSJhtZI">正在发生的对话</p>
+      <h2 data-page-node-id="w5eDDS8v0RNa5VAUKevPT8">客户已经这样挑供应商了</h2>
+      <p class="lead" style="margin-bottom:16px" data-page-node-id="JRAg590omkaKdg6XANfw8K">这是我们在客户调研里反复看到的场景，几乎每周都会出现一次。</p>
+
+      <div class="chat rv" data-page-node-id="6d4MpMosgkCOaIjoOKwrBJ">
+        <div class="chat-head" data-page-node-id="1R5v3NCpkGdU0fDBFGi52O">
+          <div class="chat-dots" data-page-node-id="5hYCexCs5qWfZpG3Ybxygt"><i data-page-node-id="olo4g0EOjZxIctFRACaOUa"></i><i data-page-node-id="31vxAoJYV5uCOQlfj2uzpd"></i><i data-page-node-id="Tt6g5NdEOSMTzNe3CUiDHA"></i></div>
+          <span class="chat-title" data-page-node-id="uxx2msVo8Zkh4NBB2toMBe">AI 助手 · 实时问答</span>
+        </div>
+        <div class="chat-body" data-page-node-id="mBPWFXNPejnIBzBjCNFiFJ">
+          <div class="msg-user" data-page-node-id="KzMXg3kTCI9ddIDjQ8saPK">
+            <span data-page-node-id="C0UlZmGUQip2HPjI60gF1j">江西有哪些靠谱的二氧化碳气体供应商？</span>
+          </div>
+          <div class="msg-ai" data-page-node-id="SJNCyyDc2ZHz97Jmz9cmFL">
+            <div class="ai-avatar" data-page-node-id="QiFTpOiuPLLbZuaoliRqWx">AI</div>
+            <div class="ai-bubble" data-page-node-id="Z1BtEOA2QY9wKFBki4Lgdl">
+              <p data-page-node-id="nUSsl5gQq8UzQxsHkMbAnY">根据公开资料与行业信息，比较常被提到的有：</p>
+              <p data-page-node-id="2yvRjdsNiSuC1Nc1NUAONF">· <span class="name" data-page-node-id="o2JT4RD3AeYw4NKcyOJgsv">A 气体有限公司</span>（多品类工业气体，配送网络较全）<br data-page-node-id="7v9pwHAAyHCBpYTa8TDGAb">
+                 · <span class="name" data-page-node-id="8kGVi7moGbTEYDG6o6lHTQ">B 特种气体</span>（食品级与电子级气体经验较多）<br data-page-node-id="56nVAWnTr5Y7LYgwaSw6hB">
+                 · <span class="name" data-page-node-id="TKVrUJHBZ9zqRb6Yn8nJco">C 工业气体</span>（中型项目性价比高，响应快）</p>
+              <p data-page-node-id="BBcZ1zr2WcVuoQb4umej77">建议结合纯度等级、配送半径与资质进一步对比，通常需要确认充装能力与售后机制。</p>
+              <span class="src" data-page-node-id="Rqbd6ydOnhHkHU6KJvQoW0">参考来源：企业官网、行业媒体访谈、公开招投标信息</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absent rv" data-page-node-id="XgRUCU8zo3ugzDCFcvYsWf">
+        <span data-page-node-id="D5NYjsGhZhRaFkpZFSkNn4">✕</span>
+        <span data-page-node-id="rbX0iD4rcMIzaRXjQnX8Pp">三个名字，没有你的。<b data-page-node-id="q1IKCtWgxfBqyX7kmVCtUy">不是产品不行，是 AI 的语料里没有你。</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 四大难题 ===== -->
+  <section class="sec" data-page-node-id="fZ6axNnah3nz8WLHonCBNA">
+    <div class="wrap" data-page-node-id="h58l030nb5UU0PcPVt9pNw">
+      <p class="eyebrow" data-page-node-id="W7tCMKcyUxJwyRN7hJQqvJ">企业面临的真实困境</p>
+      <h2 data-page-node-id="QnjthguD2HVpYugB01oSCB">想抓住 AI 流量，<br data-page-node-id="WCw3T4Kr69LV12ke3BJGqP">却卡在这四件事上</h2>
+      <ul class="pain" data-page-node-id="4nRFGYcCgIFMAUFiyHZFJh">
+        <li data-page-node-id="MJHHkoNXn2hzOY8KbwBNvi"><span class="num" data-page-node-id="RwZOVlfroCvCGjGU248NIW">01</span><span data-page-node-id="4Wd8rGnn3MIIBSfP7H7fxE"><b data-page-node-id="r89vMd3ZiFiU4dd5IUd5ka">想做，但没人做</b><span class="t" data-page-node-id="CcHnDIcmCLVi8BXsQpRsCL">GEO、内容、官网、运营都需要专业能力。自己组团队成本高，找不同供应商又难管理，很多企业想做却迟迟启动不了。</span></span></li>
+        <li data-page-node-id="5TBafgjI7NSB9G16uzIWxy"><span class="num" data-page-node-id="zHOYom3YNmOWFRhLUHKUFt">02</span><span data-page-node-id="bH68C1dUOfb8RivBXcCHLR"><b data-page-node-id="7fFJ4FG8anY0sEwBqMsfLD">想用，却用不起</b><span class="t" data-page-node-id="lgCBHZsWrFCTTdLPtO4JAW">传统 GEO 服务投入高，对中小企业并不友好，预算有限的往往被高投入挡在门外。</span></span></li>
+        <li data-page-node-id="z44a7rAmiFo1RwTcYQDxWm"><span class="num" data-page-node-id="FkaO67a3ajGMrnC9UY3uUG">03</span><span data-page-node-id="SCeBwC2FgoL6FioYM6FCn3"><b data-page-node-id="JRZT7SJLa8Ujn26OgQ6ClO">做了，不知道有没有用</b><span class="t" data-page-node-id="Ou2yFCp8hBsxb2hH0GuQza">用户会问什么？AI 为什么推荐竞品？品牌缺少哪些信息？这些问题难以判断，导致内容投入不少，却很难找到有效的优化方向。</span></span></li>
+        <li data-page-node-id="PE9AAz7VedGSwzHbEwOBoe"><span class="num" data-page-node-id="07BjWuDBFO9mdRbwEm8Bom">04</span><span data-page-node-id="zO1s0lGfN7q12Ema4azMTP"><b data-page-node-id="HzkHXeSDoxhS5i60KwdvgA">有曝光，却没有客户</b><span class="t" data-page-node-id="dz4mboEMKL2vLERPVyUHZ5">品牌被 AI 提到只是第一步。用户想进一步了解产品时没人承接、咨询没人及时响应，好不容易获得的 AI 流量还是会流失。</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 三合一 ===== -->
+  <section class="sec" data-page-node-id="edlckzEknNVDhUWGyG0sGW">
+    <div class="wrap" data-page-node-id="9azavUxr87jLk1atEopDlc">
+      <p class="eyebrow" data-page-node-id="X3Tw6ddPEA68vFJt7SAmTH">解决方案</p>
+      <h2 data-page-node-id="RPtWKY6laPIpZNPFHMaFVB">三件事，串成一条<br data-page-node-id="DWoqTgRwUFJ4sjVdAKyPJa">完整的 AI 营销链路</h2>
+      <div class="trio" data-page-node-id="AN9bCPsGYoAQ3XJcHphaNA">
+        <div class="trio-card rv" data-page-node-id="VZUmcsrpMKpEgw1UUgZFe4">
+          <div class="trio-ico" data-page-node-id="KSkfO4JswLlOlUFFxxvCDB">GEO</div>
+          <div data-page-node-id="sHB1eMErBt4Ed1rnpDEBqR">
+            <b data-page-node-id="I8r0HZQwnrE0YNp44DoJJX">GEO 优化</b>
+            <span class="tag" data-page-node-id="imc6nAZlYdXC2Emz4zDuoS">让 AI 提到你</span>
+            <span data-page-node-id="0nYEzg8EjqxtBDxHms9kmR">覆盖知识库、意图拓词、AI 文章、AI 视频、信源发布、效果监测，帮助企业持续开展 GEO 运营——从「用户会问什么」到「AI 有没有推荐你」。</span>
+          </div>
+        </div>
+        <div class="trio-card rv" data-page-node-id="U8J2ZT1NtkPTE5fl07VzsH">
+          <div class="trio-ico" data-page-node-id="xo0aqlQB6w8P2xuBy1FTjn">官网</div>
+          <div data-page-node-id="qnjx4IpxR41Ht88mB8IdYK">
+            <b data-page-node-id="C6bpKX6xBZHfh45LwxTDTE">AI 官网</b>
+            <span class="tag" data-page-node-id="UAysxXP0EpTiq0pB9mvZdq">让用户信任你</span>
+            <span data-page-node-id="wDOYOSCRyGVjhmiZj53Ztj">不只是快速建站，而是针对官网进行 GEO+SEO 优化，从内容、页面结构到底层代码持续改造和运营，让官网更容易被 AI 抓取、理解、引用，并持续积累权重。</span>
+          </div>
+        </div>
+        <div class="trio-card rv" data-page-node-id="bFILYhO5kjmf6UxgvtHaOt">
+          <div class="trio-ico" data-page-node-id="f65PWxxfYO1MA6idUYWm5v">Agent</div>
+          <div data-page-node-id="Z0K0bPL6UXwAE5oa5nu5Rr">
+            <b data-page-node-id="5x7mVdjCACVqvEQmLGGDge">Agent 数字员工</b>
+            <span class="tag" data-page-node-id="OkIYhgedOh8LYysfOOF3kO">让客户找到你</span>
+            <span data-page-node-id="HHTDtotdjPBTmvtAGHTCIY">7×24 小时在线，自动回答问题、推送产品资料、报价单、PPT 和视频，收集客户需求和联系方式，把后续咨询继续承接下来。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 能力清单 ===== -->
+  <section class="sec" data-page-node-id="YYqBBgbsFhFCEG3dnqHBnT">
+    <div class="wrap" data-page-node-id="HSobYzV54eXPZfetxa2EII">
+      <p class="eyebrow" data-page-node-id="7feCWUz0w7s07Sls7Uqibm">能力清单</p>
+      <h2 data-page-node-id="YLzSGrtHVpCJ0KXEKDJdmN">工具版都包含什么</h2>
+      <p class="lead" style="margin-bottom:16px" data-page-node-id="LydBu9OPqDELtRkP7AJYvW">按年度开通，额度和交付都以清单为准，不玩概念。</p>
+      <div class="cap" data-page-node-id="B8rgDqaDSYoJuqAZ1fmv3W">
+        <div class="cap-card" data-page-node-id="rCqNlCmahvUguP1Igupmwm">
+          <div class="ico" data-page-node-id="QgEsljiT0l213TCOnJJJj3"><svg viewBox="0 0 24 24" data-page-node-id="YybfikPCak4oOiPVyBVr7d"><path d="M4 5h16v14H4z" data-page-node-id="MAOH6ExWf9MOs0wlhA1OHB"/><path d="M8 9h8M8 13h5" data-page-node-id="sRCPbC1PmCE2XusYPSj7GQ"/></svg></div>
+          <b data-page-node-id="VJ2CCJ5p6SDO1yYK7cc7ir">品牌知识库</b>
+          <span data-page-node-id="t3h4oy5RAczoJLtXaSvWAf">企业库 + 产品库，沉淀名称、行业、简介、竞品、资质与优势，统一品牌口径</span>
+        </div>
+        <div class="cap-card" data-page-node-id="eghLOJgFMvk3JL86O04d7x">
+          <div class="ico" data-page-node-id="MSuak0jk2jJ7glIN5fKEcv"><svg viewBox="0 0 24 24" data-page-node-id="Pq6HS2ZuecwIwMsWBB8i9d"><circle cx="11" cy="11" r="7" data-page-node-id="32qOtqCazT8lIiA1fxUffn"/><path d="M20 20l-3.5-3.5" data-page-node-id="kvYgu7HVdXSBlf4MdH34py"/></svg></div>
+          <b data-page-node-id="2TgyflvpyPk3CrnjxwJSyX">AI 意图拓词</b>
+          <span data-page-node-id="BbC8bOqaWQh6uOEKwAnpSR">基于企业及产品信息生成关键词包，覆盖搜索句式、问答句式、品牌句式</span>
+          <span class="quota" data-page-node-id="GBEqe0FfqRuMbQQGZHrV70">词包不限量</span>
+        </div>
+        <div class="cap-card" data-page-node-id="M24JO3Pcx6fuQzEkcLhEtt">
+          <div class="ico" data-page-node-id="QhzPk2IUT3UcBLVoslGjmb"><svg viewBox="0 0 24 24" data-page-node-id="Kn5Vvyokai7UvhOCuR0NvS"><path d="M4 5h16M4 12h10M4 19h13" data-page-node-id="KCi9Im7ZLIKUJO4pOoBvjE"/></svg></div>
+          <b data-page-node-id="SAt2tSvv7YJhZZN55pTwN3">AI 内容创作</b>
+          <span data-page-node-id="LnF7PlEfXQB8CNwU34CuRj">关联知识库和关键词包，批量生成 GEO 文章，支持预览、编辑与审核后发布</span>
+          <span class="quota" data-page-node-id="8MsIEfHjdVyAXaPAKBjkjy">8,000 篇 / 年</span>
+        </div>
+        <div class="cap-card" data-page-node-id="RbD8La3XohURgNMgqc1kpH">
+          <div class="ico" data-page-node-id="izWLjA1pCsITRG0Rv9EYZu"><svg viewBox="0 0 24 24" data-page-node-id="sVV0Njfqr5LaLDJj7TFDWH"><rect x="3" y="5" width="18" height="14" rx="3" data-page-node-id="8rRKyGb8YFmGwmdUsjNCLa"/><path d="M10 9l5 3-5 3z" data-page-node-id="yrCkC9cp8ZTmvvoLdxhdWh"/></svg></div>
+          <b data-page-node-id="Ecic2KkkolftfgjWm6qt0V">AI 视频创作</b>
+          <span data-page-node-id="SqyQHdYRjC5hGKSApcLwQB">智能生成视频标题、口播文案和视频内容，可向企业自媒体发布</span>
+          <span class="quota" data-page-node-id="wnBkD0bcdDnfCZbPGQ2Gzv">200 条 / 年</span>
+        </div>
+        <div class="cap-card" data-page-node-id="Qn3c5GYK3cJEfmFGPxpEcq">
+          <div class="ico" data-page-node-id="dE8gsfCT6NUkqTvRCcVz6P"><svg viewBox="0 0 24 24" data-page-node-id="DaBm1m0UKpzOReBLydFHef"><path d="M12 3l8 4v5c0 5-3.4 8.2-8 9-4.6-.8-8-4-8-9V7z" data-page-node-id="RdGAk0Lz4Y6glJqoPBylN3"/></svg></div>
+          <b data-page-node-id="wUKSMGLjYABjT2ZydAOuuX">多渠道信源发布</b>
+          <span data-page-node-id="qY9NgE8gd6Zyh7Vk1U48Zw">按行业匹配第三方新闻媒体与商业媒体，构建多渠道 AI 信源矩阵</span>
+          <span class="quota" data-page-node-id="KoAgd1U68L4LHGItddkyDN">新闻 200 篇 + 商媒 7,200 篇 / 年</span>
+        </div>
+        <div class="cap-card" data-page-node-id="Uh6T4CbHaxOs61iBRcHJuy">
+          <div class="ico" data-page-node-id="l7L1SEfS01Xc2oRDGamSR5"><svg viewBox="0 0 24 24" data-page-node-id="OqYXf7MJSZGWN4NSjimTuV"><circle cx="12" cy="12" r="8" data-page-node-id="7z84MK69BBevsmKWBAuG5E"/><path d="M4 12h16M12 4c3 3 3 13 0 16" data-page-node-id="msRZeY5RGtEaHxOGquXqmD"/></svg></div>
+          <b data-page-node-id="4u4jWoIpdBa0pX8PmQ1Em6">AI 官网</b>
+          <span data-page-node-id="MFVDP2mUsUTk3AE60SY87e">自动解析企业信息生成导航、页面与内容，全站 GEO+SEO 优化与持续发文</span>
+          <span class="quota" data-page-node-id="DLatp0Y0PEVx64Vh5a9Trw">≤50 页 · 发文 5 条 / 天</span>
+        </div>
+        <div class="cap-card" data-page-node-id="A3dbeAV5CfSyMGPj6wJRr7">
+          <div class="ico" data-page-node-id="r6H4L0jxjZ9KfoFyjCHtKO"><svg viewBox="0 0 24 24" data-page-node-id="nd524mYHHQObeWWvM8oD2U"><path d="M21 12a8 8 0 10-3 6l4 1z" data-page-node-id="dzCRnna62ImNXi27gEhSS6"/><path d="M8.5 12h7" data-page-node-id="lDWmaiVDOIEUBvwbAtTZMJ"/></svg></div>
+          <b data-page-node-id="rMJYfR0mIVJTFHD26DhzYn">Agent 数字员工</b>
+          <span data-page-node-id="hF7fjRAaKDWQDWHgUFNtZy">7×24 智能应答、营销资料推送、留资与预约组件，支持 SDK 挂载官网</span>
+          <span class="quota" data-page-node-id="d5BKw9JqekuEuLt4iJXr3B">7×24 在线</span>
+        </div>
+        <div class="cap-card" data-page-node-id="DjFWFWCpetDj6swxULKves">
+          <div class="ico" data-page-node-id="35AphgCQE4Qj3H5UY57bHP"><svg viewBox="0 0 24 24" data-page-node-id="BKwmT14hxzXb2clsqD8FQl"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" data-page-node-id="6fy7PLIlS6Y4YbA6lPuBka"/></svg></div>
+          <b data-page-node-id="27iLtAGn6LBVapVS3u04zX">GEO 效果监测</b>
+          <span data-page-node-id="2exPTtrZFExOBTGGif2QVH">持续监测关键词在 AI 平台中的表现，可视化报告查看提及、收录与排名变化</span>
+          <span class="quota" data-page-node-id="idjgAuIJBRTUIGvqowpaqU">监测 &gt;3,000 词</span>
+        </div>
+      </div>
+      <p class="small" style="margin-top:12px" data-page-node-id="66k3vYfpto29EIoruiWYBO">备注：额度为年度总包；结果评估以 AI 软件打开联网搜索为准；企业自媒体需自行注册授权，日发布条数以平台限制为准。</p>
+    </div>
+  </section>
+
+  <!-- ===== 产品矩阵 ===== -->
+  <section class="sec" id="products" data-page-node-id="w6CtzgkMw71zlTzlB3LW4y">
+    <div class="wrap" data-page-node-id="vBcWusEPAm82j80FeeITG9">
+      <p class="eyebrow" data-page-node-id="jl6dfOYM6EIX5P4VQLxjx0">产品矩阵</p>
+      <h2 data-page-node-id="Pn1eKLlH0rbAKMvZRHmenD">三类企业，<br data-page-node-id="IAdrasT1u3pJKoavAeZJNA">三条入场路径</h2>
+      <p class="lead" style="margin-bottom:16px" data-page-node-id="Ebu1EE1lE5N2X3pxMnWxvq">不管是第一次尝试 GEO，还是希望降低 AI 营销投入，都能找到更适合的入场方式。</p>
+
+      <div class="prod" data-page-node-id="jTBF33FoaXz8GA5dgv0efr">
+        <div class="prod-card hot" data-page-node-id="XgECBinfHStMy37d9uCdPl">
+          <span class="prod-badge" data-page-node-id="uEtPeXBqzUJHxNRIZiFxJu">主力方案</span>
+          <div class="prod-h" data-page-node-id="MjAIBX6cRjASrLd6Kixunl"><b data-page-node-id="tHmKOmUTa2FCip0FeIWPkf">GEO 工具版 3.0</b><span data-page-node-id="Tnhmf0FcdNNok9oTd6Q0R4">成长型企业</span></div>
+          <div class="for" data-page-node-id="CqewEqhGqNY24mKqEJW1zC">适合：想低成本起步、没有专业 AI 运营团队的企业</div>
+          <p data-page-node-id="UXFuWfiLIYT93E6eVQLtCz">GEO 优化 + AI 官网 + Agent 数字员工三合一，覆盖从 AI 搜索布局、自有信源建设到咨询承接的关键环节。</p>
+          <ul data-page-node-id="zeUqo2ev2hizvVEwiIdeik">
+            <li data-page-node-id="IVMXWn9wkleIKDKUQpj2rp">年度内容与信源额度一次配齐（详见上方能力清单）</li>
+            <li data-page-node-id="CZASpGtmU2GpWa8BaHFmdF">标准化产品流程，无需自建技术团队</li>
+            <li data-page-node-id="hhgXtYYNpEwzgk90bD1ky6">曝光、承接、转化闭环，流量变成有效线索</li>
+          </ul>
+          <button class="prod-cta" data-scroll="#apply" data-page-node-id="dCqZOIpvTSQgY3rzkHDoSo">咨询工具版方案</button>
+        </div>
+
+        <div class="prod-card" data-page-node-id="xxu1JIEQo2SgMR9Yq3xCY1">
+          <div class="prod-h" data-page-node-id="o73obL0qjxa359MjC0zD66"><b data-page-node-id="XrkXjdKo0JGrFzxl0sCAOj">GEO 电商版</b><span data-page-node-id="80fm91LTaMxMxc6eACIV8B">抖音电商商家</span></div>
+          <div class="for" data-page-node-id="YVZTWbt5A2rjTW10qWXGuv">适合：数码、家电、美妆、母婴等高决策、高比较成本品类</div>
+          <p data-page-node-id="6FL11E7aBVoI248euoYh7R">面向抖音电商商家的豆包商品卡优化服务，优化豆包答案策略下的商品卡出卡机会。</p>
+          <ul data-page-node-id="UuV4HT4SpuUaA1yXElzSaL">
+            <li data-page-node-id="m9nbBgduJ7LNTLwKZyoK1E">品牌推荐率、品牌出卡率周度数据可查，交付出卡截图</li>
+            <li data-page-node-id="cZIV7BCmSMYHtKczB3AhPE">静态商品卡：问答内图文直达详情页领券下单</li>
+            <li data-page-node-id="rnJGhSKIRv0nJXSwLGYVLD">总部认证优化师团队统一承接交付</li>
+          </ul>
+          <button class="prod-cta" data-scroll="#apply" data-page-node-id="pvXBNEgVd9fBnyV1bqJ1Uz">咨询电商版方案</button>
+        </div>
+
+        <div class="prod-card" data-page-node-id="1OA4VQ9pmj2RJg51yKoiYE">
+          <div class="prod-h" data-page-node-id="odFzc0Z5kNHmIuNrk0zUvs"><b data-page-node-id="D4agem0g2m5BGtU6vau06B">GEO 海外版</b><span data-page-node-id="AHYZ3OEDNytaFgbTAkxdnB">出海品牌</span></div>
+          <div class="for" data-page-node-id="p8bWwGZxlWrF8gQzcdH0Qa">适合：跨境电商、出海品牌与海外业务团队</div>
+          <p data-page-node-id="an0TCoLwgSOvmJiPEAWn8D">覆盖 ChatGPT、Perplexity、Copilot、Gemini、Google AI Mode 等 8 大海外 AI 平台，面向 200+ 国家和地区的多语言 Query 优化。</p>
+          <ul data-page-node-id="lOWIsjsu34xGpBhRvoI8I1">
+            <li data-page-node-id="uphxFW5VTr6bFqEHEjhdwL">从 AI Chat 到 AI Search、AI Answer、AI Assistant 的主要海外入口</li>
+            <li data-page-node-id="GZPo3Xv0IWbHQeuQCYI4M8">本地语言 × 本地场景 × 本地用户决策 Query</li>
+            <li data-page-node-id="eeJ4bmP6Rr6AhWOAlT6MUb">可选官网 AI 检索基础设施改造（一次性技术服务）</li>
+          </ul>
+          <button class="prod-cta" data-scroll="#apply" data-page-node-id="m4J5nGXyQQhWO6PmSPnBlu">咨询海外版方案</button>
+        </div>
+      </div>
+
+      <div class="ind-chips" data-page-node-id="IvXovIPyoBr0KhRsdmyaBV">
+        <span class="ind-chip" data-page-node-id="xav4q1y4b5ohgzJdZregha">教育行业</span>
+        <span class="ind-chip" data-page-node-id="BDKa6COPpRF6qRaw81jEQe">科技 3C</span>
+        <span class="ind-chip" data-page-node-id="UXUW7AM8G7CP6DO0NYJRhY">智能制造</span>
+        <span class="ind-chip" data-page-node-id="be7JgUGJ09GMBZSosGGSwo">消费零售</span>
+        <span class="ind-chip" data-page-node-id="uc3Z35mw3E0F9dBVaZfRBH">B2B 平台</span>
+        <span class="ind-chip" data-page-node-id="U8xSp7nGh9TsF5Cpx41Zcz">企业服务</span>
+        <span class="ind-chip" data-page-node-id="KRGGsuU22NANdIsZz4Tl2h">本地生活</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 案例 ===== -->
+  <section class="sec" data-page-node-id="0eobob0owDCXn6vNQQiBfu">
+    <div class="wrap" data-page-node-id="4kWBlLiezeTHk09PZ2FIVG">
+      <p class="eyebrow" data-page-node-id="8s4Ujm3LNzpRZDADJzyrds">客户成果</p>
+      <h2 data-page-node-id="2zv2aWJFFxvILk7RF4ReJX">3000+ 企业<br data-page-node-id="HiGygMddJSdEeObZ1CnCrY">已经开始布局 AI 搜索</h2>
+
+      <div class="case rv" data-page-node-id="7BxtkOPpcr38Pr3CGUMfod">
+        <div class="case-top" data-page-node-id="BQiit5XD1i9OwQgYAIuqUK">
+          <span class="case-ind" data-page-node-id="UjVyTmWPQEDQ2xxDSDKNSg">文化传媒 · 小红书代运营</span>
+          <span class="case-dur" data-page-node-id="PYPk2uPBOm05nsDheCNEcR">豆包 / DeepSeek</span>
+        </div>
+        <div class="case-nums" data-page-node-id="ghRElMCRQgMRmBnOZFsvps">
+          <div class="cn" data-page-node-id="0ONKmBOd0JN2CHZMIoKTvo"><div class="k" data-page-node-id="1CpbF6pJk3ckFyASTDDOq1">AI 渠道累计成交金额</div><div class="v" data-page-node-id="utJVzmx8ofSvTBB00J3u2g">10 万元</div><div class="d" data-page-node-id="sGI5oaBuQ7cQ9OnbPZoQJL">10 天内</div></div>
+          <div class="cn" data-page-node-id="OKuAqufJO0DO6OFElF4Hgr"><div class="k" data-page-node-id="h0Dwp1guC50lxZ1A0EpZG5">有效意向 / AI 成交</div><div class="v" data-page-node-id="BnT47E8BgwDU82Rk3ZTUHY">5 个 / 2 单</div><div class="d" data-page-node-id="Rx1tuY11RpdcH8l6a2uqaa">转化周期 &lt;10 天</div></div>
+        </div>
+        <div class="case-desc" data-page-node-id="Ec3VSflzmC7FDz6GcbNfaO">第 2 周豆包推荐成交 8 万元，第 3 周 DeepSeek 推荐成交 2 万元——从 AI 推荐到真实成交。</div>
+        <div class="case-quote" data-page-node-id="txV7KA9N0KXlKgRpuCFNtW">「线下问到客户，反馈是看到 AI 推荐而来，GEO 很有效果。」</div>
+      </div>
+
+      <div class="case rv" data-page-node-id="WiX2Pq8JI0yfTF4Yzol74d">
+        <div class="case-top" data-page-node-id="BkaRpm1ReZGvl5gjWrwXuh">
+          <span class="case-ind" data-page-node-id="Zf9RWV8L3hmjKHm4zirg3k">公关策划 · 活动策划</span>
+          <span class="case-dur" data-page-node-id="RbMtezFXtGiMpAD0zAGKnx">豆包 / DeepSeek</span>
+        </div>
+        <div class="case-nums" data-page-node-id="F3b7brDpwrli6CfL3PDnFh">
+          <div class="cn" data-page-node-id="OMbhUsyl3VMeL0kiHGnqVR"><div class="k" data-page-node-id="twStRWNoyosS8faesObJsI">官网访问</div><div class="v" data-page-node-id="W74b4sAOvHVhk816JRMVp8">220 → 1020</div><div class="d" data-page-node-id="iVINKR0aYNN2NkwiUj4d3e">+364%</div></div>
+          <div class="cn" data-page-node-id="BjDbVBZSrMNJisveBbiacT"><div class="k" data-page-node-id="R3XLuNQgz99TjBUpwv9Fyl">电话咨询</div><div class="v" data-page-node-id="9kvgrCGHpz5SnLfVRRdoES">18 → 48</div><div class="d" data-page-node-id="m72yDsGi3AXg0DH5HwnaX5">+167%</div></div>
+          <div class="cn" data-page-node-id="kXvmWK68vFCYlICBDgEf5Z"><div class="k" data-page-node-id="CvOrDmwmn70yOK41SVpYr3">有效意向</div><div class="v" data-page-node-id="QNtPSdbNwayCi83F5vEt40">5 → 7</div><div class="d" data-page-node-id="h9ZlQVNdDortTpydv6jZvB">+40%</div></div>
+          <div class="cn" data-page-node-id="nH9YGYFsi3zkrUjiy2UAEw"><div class="k" data-page-node-id="59pYXsU6HrCihOq78IOZvo">成交客户</div><div class="v" data-page-node-id="ChQDAK3kROSx4w4X51d1Qb">2 → 3</div><div class="d" data-page-node-id="kJSwLISISPIOeHkE3H1hdO">+50%</div></div>
+        </div>
+        <div class="case-desc" data-page-node-id="1h2ZpTjM3fPOdevrNhU0oX">从「被 AI 提到」到「真实业务增长」：官网访问、电话咨询、有效意向和成交同步提升。</div>
+      </div>
+
+      <div class="case rv" data-page-node-id="DGAWE1VGkOiRUhXRUI4lui">
+        <div class="case-top" data-page-node-id="55prVUPEfuAS6rV55snxe8">
+          <span class="case-ind" data-page-node-id="uBHvi9Lz6R7902wfnNUEb6">化工 · 二氧化碳气体（B2B）</span>
+          <span class="case-dur" data-page-node-id="fm5ASXRFNjZj3HG9sLOInZ">豆包</span>
+        </div>
+        <div class="case-nums" data-page-node-id="KDxB3nWkclEBB5v67AD47B">
+          <div class="cn" data-page-node-id="6Jc4dYVyFER169cRSM2eYQ"><div class="k" data-page-node-id="FHdNaCsTFp5cZVNgI4BpFt">电话咨询 / 月</div><div class="v" data-page-node-id="PKsJDaA16RcsjcDArOauEG">15 → 32</div><div class="d" data-page-node-id="HlGEJuaKNINN2VhGeWJdOd">+113%</div></div>
+          <div class="cn" data-page-node-id="kZ4Mg6MPJY4gCh8NpBvWpK"><div class="k" data-page-node-id="Jl5N5a2xsnSvwOliIL1b3n">有效意向 / 月</div><div class="v" data-page-node-id="8dLUSZdbNc0q0ltVBYozqV">2 → 8</div><div class="d" data-page-node-id="SwpLlnuevKXJxNHbgp8w0s">+300%</div></div>
+          <div class="cn" data-page-node-id="ftjjEf66GCmOgx8Ro56yAk"><div class="k" data-page-node-id="w1J42ubSwwc4tpLVllYYjX">成交客户 / 月</div><div class="v" data-page-node-id="Dm72JCLkAdZC41riqb1L6U">4 → 7</div><div class="d" data-page-node-id="Mr9nVGGiQRqHFlNAdbSJrz">+75%</div></div>
+        </div>
+        <div class="case-desc" data-page-node-id="e7sIcWr0e8pOQwmNWXM8dM">采购方的搜索方式正在变化：从搜「江西二氧化碳气体厂家」，到直接问 AI「江西有哪些靠谱的供应商」。企业被发现的方式，也要跟着变。</div>
+      </div>
+      <p class="small" style="margin-top:10px" data-page-node-id="exNUrUxD6NuMZcrao7kgV3">案例数据来源于 360智见客户案例（脱敏处理），实际效果因行业竞争度、内容基础与执行周期而异。</p>
+    </div>
+  </section>
+
+  <!-- ===== 资质 ===== -->
+  <section class="sec" data-page-node-id="qeBcXzF3HxcYE0aFHFw2Fp">
+    <div class="wrap" data-page-node-id="neoZSWbd4rU6xiAiPsQg9U">
+      <p class="eyebrow" data-page-node-id="N53CbgjOaK7Rphq7AGI6s5">专业能力与权威资质</p>
+      <h2 data-page-node-id="GhrKzJrdtHRmBpHXtg4z31">让 AI 营销<br data-page-node-id="mBppecSPTFzNjEsx85iyfW">更安全可信</h2>
+      <div class="auth" data-page-node-id="l1Bv02clEZqFZFbUBuGfHA">
+        <div class="auth-card" data-page-node-id="KNc4hNbZXtfRsA8ZaNvfsM"><b data-page-node-id="TpvQl7hFMwJe7VZ3j3omMp">首批通过中国信通院 GEO 服务可信专项评测</b><span data-page-node-id="T3D203ljzLKFGL1sac9qtJ">GEO 服务可信度经第三方权威机构评测</span></div>
+        <div class="auth-card" data-page-node-id="otrsOtRG2gY8ZlUVtWZbue"><b data-page-node-id="8gqRCTdRSKZSib4Oege5j5">参编中国广告协会 GEO 团体标准</b><span data-page-node-id="8CE4oTI1yesJxdThsSGGZz">参与《生成引擎优化(GEO)团体标准》及信通院《GEO 可信生态研究报告》</span></div>
+        <div class="auth-card" data-page-node-id="U4R6LrqK8GIJ1RoDSOphpE"><b data-page-node-id="Jahvb70Cme8ISZHEHITgME">2026 中国 GEO 服务商采购指南 标杆服务商</b><span data-page-node-id="LwXwdS62HB0PA3HutNNKRZ">获选行业标杆服务商</span></div>
+        <div class="auth-card" data-page-node-id="SYlWMFDEQb1VYyY7uCE0x4"><b data-page-node-id="S1mDiYu7d9UbvVEMd2PKGO">360 集团生态能力</b><span data-page-node-id="UeD7QsZ0uvipLBbYGtP4m7">360 搜索生态 × 360 智脑大模型 × 360 安全技术 × 百万级企业服务经验</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 体检 ===== -->
+  <section class="sec" id="check" data-page-node-id="JBTOLQNJXmLCFlKyzF4Dlp">
+    <div class="wrap" data-page-node-id="CRl0blhKyPPL6ocsdCQOwD">
+      <div class="quiz-shell" id="quiz" data-page-node-id="NcEBcymgFZrAffvX4AOXzr">
+        <p class="eyebrow" data-page-node-id="0BDu7UlYxHsSRfw0aCUTdh">免费自测</p>
+        <h2 data-page-node-id="GKMpuzXt6uYg8mMeadhAf7">你的品牌，在 AI 眼里<br data-page-node-id="yWxB6qqftdOtXIwl9hnlXb">有多少分？</h2>
+        <p class="qs-sub" data-page-node-id="DRG1kkf5WABsu3ukPG3CwP">8 道题 · 约 3 分钟 · 测完立刻出结果</p>
+
+        <div id="quizBody" data-page-node-id="GYtaf00i4KERXJCkFOtc7L">
+          <div class="qbar" data-page-node-id="JYZPBWcqPi6IY7cCgx74MK"><i id="qbar" data-page-node-id="tw8oDWMf0N6Sp2VPIySK2z"></i></div>
+          <div class="qmeta" data-page-node-id="KJ0u41ZJm9LrE5rpowQj5o"><span id="qStep" data-page-node-id="wZLqcAYGz869hqWDPQG0SN">第 1 / 8 题</span><span id="qPct" data-page-node-id="a4abdzIEEl77mfgWCVQCqe">0%</span></div>
+          <div class="qtext" id="qText" data-page-node-id="C8y5mgX2VXyj8ZajpGaFnn">加载中…</div>
+          <div class="qopts" id="qOpts" data-page-node-id="FEVU1uICBXeSMK99kgFxMb"></div>
+        </div>
+
+        <div id="quizResult" style="display:none" data-page-node-id="m481VD7W91YUdG8JnrOYD4">
+          <div class="result-score" data-page-node-id="KyohapUboKO0Q9fpV1LJAb">
+            <div class="ring" data-page-node-id="bAeLZquN8W0PqKumCdLFsl">
+              <svg width="104" height="104" viewBox="0 0 104 104" data-page-node-id="TYP8yv8Mm8x4OuaofE8Tif">
+                <circle cx="52" cy="52" r="46" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="8" data-page-node-id="4Zhi4VOrUCe9O5BNefOP9q"/>
+                <circle id="ringBar" cx="52" cy="52" r="46" fill="none" stroke="url(#grad)" stroke-width="8"
+                        stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289"
+                        style="transition:stroke-dashoffset 1s cubic-bezier(.4,0,.2,1)" data-page-node-id="sH9Gah6A18jlQGCnGZz5WJ"/>
+                <defs data-page-node-id="VeldWocGNqpgY9KSj5tCqJ">
+                  <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1" data-page-node-id="Tlo5m2GF0j98FZBmVVuisj">
+                    <stop offset="0%" stop-color="#57D9C8" data-page-node-id="2t42Qpl6G6txmFzCuMD5Ok"/>
+                    <stop offset="100%" stop-color="#8FE0A8" data-page-node-id="pTEWHcs4mNV7VxZ2Fntksj"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="num" data-page-node-id="Upnu2PkxGbUkDvpvoM8gIj"><span id="scoreNum" data-page-node-id="57t8n95lmxb9HRs07VzUyP">0</span><i data-page-node-id="CTCxFmqUcXFknVNKemNzf3">/ 16</i></div>
+            </div>
+            <div class="result-txt" data-page-node-id="xoAoNlshiXto6vhSgtwz6v">
+              <b id="gradeName" data-page-node-id="uG5bqScfcs7cfsylUkzpwf">—</b>
+              <span id="gradeDesc" data-page-node-id="Ogv1JjVxARlSsbGGexNvgJ">—</span>
+            </div>
+          </div>
+          <ul class="advice" id="adviceList" data-page-node-id="2O38DTHJTfA74BzY8T0ffW"></ul>
+          <div class="quiz-cta" data-page-node-id="bNalwEbIcZDBFxdl2puujV">
+            <button class="btn" id="toForm" data-page-node-id="tU4Vi52C4D3sr9RI3Bc0Aq">领取完整诊断 + 在线咨询顾问</button>
+          </div>
+          <button class="quiz-restart" id="restart" data-page-node-id="wf5MzMLUJthJ44EUfvLGW7">重新测一次</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 留资 / 咨询 ===== -->
+  <section class="sec" id="apply" data-page-node-id="uZ4TOjKBjkNlJgE5PpYM7s">
+    <div class="wrap" data-page-node-id="WbuFC8qn1xdqtYYvUi27U2">
+      <p class="eyebrow" data-page-node-id="BTkwWLbMzcgTAHGffVLgr4">在线咨询</p>
+      <h2 data-page-node-id="pXyDsJOpKUA71mArRl04N1">留个联系方式，<br data-page-node-id="HBxdB8CNZDyHHggnYrEjSv">顾问一对一给你方案</h2>
+      <p class="lead" style="margin-bottom:16px" data-page-node-id="QWILgGNuDPgtRmDgWVburX">告诉我们你的行业和现状，顾问会结合你的情况给出适合的入场方式；聊过之后如果双方不合适，我们会直说，不绕弯。</p>
+
+      <div class="form-card" data-page-node-id="CFydTd35qGbloVgichQULE">
+        <div id="formBody" data-page-node-id="spOSc8NtJTkhpGFkbGZVBG">
+          <div class="field" data-page-node-id="acnYxugj7rCt3ifkoqy6Pl">
+            <label data-page-node-id="CQsfGyi3t8nWrRL9fHtiCH">怎么称呼你<i data-page-node-id="oTLDoQLNdFFn0jR3nQr5HC">*</i></label>
+            <input id="fName" type="text" placeholder="例如：王总 / 王经理" autocomplete="name" data-page-node-id="5VkwYihEeWegd5EHAmayul">
+          </div>
+          <div class="field" data-page-node-id="PWc951dtEsmCmnwvXbLTIA">
+            <label data-page-node-id="XuBaZoSsgumEWQI8BqgI7i">公司 / 品牌名<i data-page-node-id="7kuloq3yMFZSgIiS91F1mh">*</i></label>
+            <input id="fCompany" type="text" placeholder="客户会这样搜你" autocomplete="organization" data-page-node-id="VMD88Bm4lrEVYahVohtyys">
+          </div>
+          <div class="field" data-page-node-id="ncCSgnDaLAkQhivpGqdars">
+            <label data-page-node-id="PNxXDK9clpsnvzo5uqJqsL">感兴趣的方向</label>
+            <select id="fIndustry" data-page-node-id="7NqC1G9w4Jrla9eHltziAn">
+              <option value="" data-page-node-id="KHmPArqb1oDNAdHC2FKIeh">请选择</option>
+              <option data-page-node-id="jzQv24sXcZFdOjnPBDzNyg">GEO 工具版（成长型企业）</option>
+              <option data-page-node-id="Tl0opXnAFj7lU4AMBcFbj9">GEO 电商版（抖音商家）</option>
+              <option data-page-node-id="59FBDvfgjBLS87wHUYXzAh">GEO 海外版（出海品牌）</option>
+              <option data-page-node-id="VlDTOTZ22UaPuaHd8Yzmc8">还不确定，想先了解</option>
+            </select>
+          </div>
+          <div class="field" data-page-node-id="m4y8lCm53W3WeGfMtDKI5g">
+            <label data-page-node-id="sXtK4CefEGccCy7qdXi73v">微信或手机号<i data-page-node-id="1dwL5CyIDCi0qrKsZ7kzs6">*</i></label>
+            <input id="fContact" type="text" placeholder="方便顾问直接联系你" inputmode="text" data-page-node-id="fPX1P3oGZg3F1eIWQdMaF8">
+            <div class="err" id="errContact" data-page-node-id="zvc4T1FTOTL7UIJu1ym55H">请填一个能联系上的微信号或手机号</div>
+          </div>
+          <div class="field" data-page-node-id="l5Fv1TcLVTuGDggudCR5dj">
+            <label data-page-node-id="2G13ABLINH8wefyEHIymNA">现在最想解决的事（可多选）</label>
+            <div class="chips" id="fNeeds" data-page-node-id="fE8CNDFGkWxwtN3BoJ6tv6">
+              <button type="button" class="chip" data-page-node-id="2klbuW5g7JWa4SOT5EDFw6">AI 里搜不到我</button>
+              <button type="button" class="chip" data-page-node-id="v1EZ0qBPMv1UkuriZZV1by">同行被推荐</button>
+              <button type="button" class="chip" data-page-node-id="d4H51fp77gtnpnxptD0BGI">不知道从哪下手</button>
+              <button type="button" class="chip" data-page-node-id="FQCpSmPgBcGtLQ9o3vSDEb">想要电商商品卡出卡</button>
+              <button type="button" class="chip" data-page-node-id="08EkOSb4RakhMjXSFG63NW">做出海业务</button>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="submitBtn" style="margin-top:6px" data-page-node-id="1eGowbljbNw8qAPCFrlg4H">提交，等顾问联系我</button>
+          <p class="form-note" data-page-node-id="sEdUKEK6bHtiNq92WXKJ9l">信息仅用于本次业务沟通。你也可以直接添加顾问微信，备注「AI 可见度诊断」会优先通过。</p>
+        </div>
+
+        <div class="success" id="formSuccess" data-page-node-id="M8os8GR5i4ahr9Ep4WXzIs">
+          <div class="ok-mark" data-page-node-id="FjNp7OuhHPMYo18dfsW0QN"><svg viewBox="0 0 24 24" data-page-node-id="UW84BAj95PvJwfe2hpBYjp"><path d="M4 12.5l5 5L20 6.5" data-page-node-id="GG5oRbZsAWOfEjur5LOem5"/></svg></div>
+          <h3 data-page-node-id="XXd7UW3IVjLmqbnTaMyFiV">提交成功</h3>
+          <p data-page-node-id="CAt732WHwV4whX0A2kdrqC">也可以现在就复制咨询信息发给顾问，<br data-page-node-id="k3KgF17KQup1CHfDi473t8">回复更快。</p>
+          <div class="lead-card" id="leadCard" data-page-node-id="xGl40p6LrhBAmYjLizNDNv"></div>
+          <div class="wechat-box" data-page-node-id="DRL9JQmnaIdiHafAJdXAQO">
+            <div class="k" data-page-node-id="8DD3y7xp4BDLwCa3IgZtfQ">添加顾问微信（备注：AI 可见度诊断）</div>
+            <div class="v" id="wxId" data-page-node-id="LCfaTntz2gQToCB6PZZMSf">your-wechat</div>
+            <button class="copy-mini" id="copyWx" data-page-node-id="M1uCcfBjqkGJk7qfPquSbG">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="yLzqwNSC2jKhJ7vWVj7GGt"><rect x="9" y="9" width="12" height="12" rx="2" data-page-node-id="4CPHK1CXNsDaYZajckSTRT"/><path d="M6 15H5a2 2 0 01-2-2V5a2 2 0 012-2h8a2 2 0 012 2v1" data-page-node-id="RfpUmgED9a2LKe5VntPnjR"/></svg>
+              复制微信号
+            </button>
+            <div class="qr-wrap" id="qrWrap">
+              <img id="qrImg" src="" alt="顾问微信二维码">
+              <div class="qt"><b>扫码直接加我</b>长按识别上方二维码，<br>或截图后用微信扫一扫打开。</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="copyLead" data-page-node-id="XBwW30pDB3qO51wP9AuFCw">复制咨询信息，发给顾问</button>
+          <button class="quiz-restart" id="formReset" data-page-node-id="rrQByKE6DNEqeqGBqgO24x">重新填写</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 页脚 ===== -->
+  <footer data-page-node-id="TnMvWuwy6c3p6OTDCiD9OI">
+    <div class="line" data-page-node-id="hSTdx5EX8CoPvdMDJIC1n9"></div>
+    <p class="fs" data-page-node-id="nVnGmNaBAzAR1wiYwkYn88">
+      360智见 GEO · 生成式引擎优化<br data-page-node-id="bISeesb6tTtBiwVFESAwyT">
+      产品能力与案例数据来源于 360智见官方产品资料，不构成效果承诺<br data-page-node-id="npiSDKhl6vCfUiYOTQDbJ2">
+      © 2026
+    </p>
+  </footer>
+
+  <!-- ===== 悬浮 CTA ===== -->
+  <div class="sticky" id="sticky" data-page-node-id="3BOzRlYxqgsF63G6W1b9gc">
+    <button class="btn btn-ghost" data-scroll="#check" data-page-node-id="YI6aIhwBiQMwPeMDAlCLuW">免费测分</button>
+    <button class="btn btn-primary" data-scroll="#apply" data-page-node-id="E5VqzDIHedyfMv6xs3jF4j">在线咨询顾问</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" data-page-node-id="jZ3RQsfxPOUXCqTqncjxxt">已复制</div>
+
+<script>
+/* =========================================================
+   可改区域：品牌信息集中在这里，其余不用动
+   ========================================================= */
+const CONFIG = {
+  wechat: '13311005591',   // 顾问微信号（手机号）
+  qrImage: './qr.png'      // 微信二维码图片
+};
+
+/* ---------------- 通用工具 ---------------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+function toast(msg) {
+  const t = $('#toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._tid);
+  t._tid = setTimeout(() => t.classList.remove('show'), 1600);
+}
+
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+  }
+  return fallbackCopy(text);
+}
+function fallbackCopy(text) {
+  return new Promise((resolve) => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    resolve();
+  });
+}
+
+/* 平滑滚动 */
+$$('[data-scroll]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const el = $(btn.dataset.scroll);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+/* 滚动入场 */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+$$('.rv').forEach((el) => io.observe(el));
+
+/* 悬浮条 */
+const sticky = $('#sticky');
+const applySec = $('#apply');
+let ticking = false;
+function updateSticky() {
+  const formTop = applySec.getBoundingClientRect().top;
+  const inForm = formTop < window.innerHeight * 0.55;
+  sticky.classList.toggle('show', window.scrollY > 300 && !inForm);
+  ticking = false;
+}
+window.addEventListener('scroll', () => {
+  if (!ticking) { requestAnimationFrame(updateSticky); ticking = true; }
+}, { passive: true });
+updateSticky();
+
+/* =========================================================
+   一、AI 可见度体检（8 题 / 满分 16）
+   ========================================================= */
+const QUESTIONS = [
+  { dim: 'visible', q: '在豆包、DeepSeek 里搜你的公司名，能出现准确的公司介绍吗？',
+    opts: [['能看到，且描述准确', 2], ['能搜到，但信息零散或过时', 1], ['基本搜不到，或只有同名无关内容', 0]] },
+  { dim: 'visible', q: '问 AI「XX 行业哪家好」时，会提到你吗？',
+    opts: [['经常被提到，有时排在前几位', 2], ['偶尔提到一次，不稳定', 1], ['从没被提到过', 0]] },
+  { dim: 'asset', q: '你们有对外口径统一的品牌介绍（一段话讲清是谁、做什么、凭什么是你）吗？',
+    opts: [['有，所有渠道都用同一版', 2], ['有，但各渠道说法不太一样', 1], ['没有，每次都是临时写', 0]] },
+  { dim: 'asset', q: '官网内容是按「客户会问的问题」组织的，还是按公司部门结构排的？',
+    opts: [['按客户问题组织的', 2], ['两者混合', 1], ['按部门/产品目录排的', 0]] },
+  { dim: 'source', q: '最近 12 个月，有第三方（行业媒体、垂直平台、协会）发布过关于你们的内容吗？',
+    opts: [['有 3 篇以上', 2], ['有 1–2 篇', 1], ['没有，全是自己发的', 0]] },
+  { dim: 'source', q: '你们在百科、企业信息平台、行业黄页上的词条信息完整准确吗？',
+    opts: [['完整，且信息统一', 2], ['有词条，但内容旧了', 1], ['没有词条，或信息是错的', 0]] },
+  { dim: 'monitor', q: '有人定期去各个 AI 引擎里看「别人怎么被推荐、你们有没有被提到」吗？',
+    opts: [['有，每月至少看一次', 2], ['偶尔想起来看一眼', 1], ['从来没看过', 0]] },
+  { dim: 'monitor', q: '如果 AI 说错了你们的信息，你们知道怎么纠正吗？',
+    opts: [['知道，已经试过并有反馈', 2], ['大概知道思路，没实操', 1], ['完全不知道从哪下手', 0]] }
+];
+
+const DIM_INFO = {
+  visible: {
+    name: 'AI 可见度',
+    low: '先做基线：用真实客户提问跑一遍主流 AI 引擎，把「你出现几次、竞品出现几次」量化出来，这是所有动作的靶心。'
+  },
+  asset: {
+    name: '内容资产',
+    low: '你的对外表述还不够「机器可读」。需要一份统一品牌定义 + 按客户提问重写的内容结构，让 AI 能一句话摘走。'
+  },
+  source: {
+    name: '权威信源',
+    low: '现在几乎只有你自己在说自己。AI 更信第三方交叉印证，缺行业媒体与平台词条，是提名率上不去的主因。'
+  },
+  monitor: {
+    name: '监测机制',
+    low: '没有观测就没有优化。建立月度复跑机制，才知道哪条策略真的让提名率变了。'
+  }
+};
+
+let qIndex = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+
+function renderQuestion() {
+  const item = QUESTIONS[qIndex];
+  $('#qStep').textContent = `第 ${qIndex + 1} / ${QUESTIONS.length} 题`;
+  const pct = Math.round((qIndex / QUESTIONS.length) * 100);
+  $('#qPct').textContent = pct + '%';
+  $('#qbar').style.width = pct + '%';
+  $('#qText').textContent = item.q;
+
+  const box = $('#qOpts');
+  box.innerHTML = '';
+  item.opts.forEach(([label, score]) => {
+    const b = document.createElement('button');
+    b.className = 'qopt';
+    b.type = 'button';
+    b.textContent = label;
+    b.addEventListener('click', () => {
+      answers[qIndex] = score;
+      $$('.qopt', box).forEach((x) => { x.classList.add('dim'); x.classList.remove('sel'); });
+      b.classList.remove('dim');
+      b.classList.add('sel');
+      setTimeout(() => {
+        if (qIndex < QUESTIONS.length - 1) { qIndex++; renderQuestion(); }
+        else showResult();
+      }, 220);
+    });
+    box.appendChild(b);
+  });
+}
+
+function showResult() {
+  const total = answers.reduce((a, b) => a + (b || 0), 0);
+  const max = QUESTIONS.length * 2;
+
+  $('#quizBody').style.display = 'none';
+  $('#quizResult').style.display = 'block';
+
+  const ring = $('#ringBar');
+  const C = 289;
+  ring.style.strokeDashoffset = C - (total / max) * C;
+
+  const numEl = $('#scoreNum');
+  let cur = 0;
+  const step = Math.max(1, Math.round(total / 16));
+  const tid = setInterval(() => {
+    cur += step;
+    if (cur >= total) { cur = total; clearInterval(tid); }
+    numEl.textContent = cur;
+  }, 40);
+
+  let name, desc;
+  if (total <= 5)      { name = '高危：AI 几乎不认识你'; desc = '在这个阶段，AI 提到同行的概率远高于提到你。好消息是，起点低意味着提升空间大。'; }
+  else if (total <= 9) { name = '落后：有基础，没被引用'; desc = '你并不缺内容，缺的是让 AI 愿意引用它的结构、以及第三方的交叉印证。'; }
+  else if (total <= 12){ name = '起步：部分场景能被提到'; desc = '已经有零星提名，但还不稳定。现在做结构化补强，性价比最高。'; }
+  else                 { name = '领先：已进入被推荐序列'; desc = '你已经吃到 GEO 的红利。接下来要做的是守住位置并扩大提问覆盖面。'; }
+  $('#gradeName').textContent = name;
+  $('#gradeDesc').textContent = desc;
+
+  const dimScore = {};
+  QUESTIONS.forEach((q, i) => { dimScore[q.dim] = (dimScore[q.dim] || 0) + (answers[i] || 0); });
+  const ranked = Object.keys(dimScore)
+    .map((d) => ({ d, ratio: dimScore[d] / 4 }))
+    .sort((a, b) => a.ratio - b.ratio);
+
+  const list = $('#adviceList');
+  list.innerHTML = '';
+  ranked.slice(0, 3).forEach(({ d, ratio }) => {
+    const li = document.createElement('li');
+    li.textContent = ratio >= 0.75
+      ? `${DIM_INFO[d].name}：这块你做得不错，保持并扩大覆盖提问数即可。`
+      : DIM_INFO[d].low;
+    list.appendChild(li);
+  });
+}
+
+$('#restart').addEventListener('click', () => {
+  qIndex = 0;
+  answers = new Array(QUESTIONS.length).fill(null);
+  $('#quizResult').style.display = 'none';
+  $('#quizBody').style.display = 'block';
+  renderQuestion();
+});
+
+$('#toForm').addEventListener('click', () => {
+  $('#apply').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setTimeout(() => { const el = $('#fName'); if (el) el.focus({ preventScroll: true }); }, 600);
+});
+
+renderQuestion();
+
+/* =========================================================
+   二、留资 → 生成咨询单
+   ========================================================= */
+$$('#fNeeds .chip').forEach((c) => {
+  c.addEventListener('click', () => c.classList.toggle('on'));
+});
+
+function buildLead(data) {
+  const lines = [
+    `【AI 可见度咨询】`,
+    `称呼：${data.name}`,
+    `公司/品牌：${data.company}`,
+    data.interest ? `感兴趣方向：${data.interest}` : null,
+    `联系方式：${data.contact}`,
+    data.needs.length ? `关注点：${data.needs.join('、')}` : null,
+    data.score !== null ? `\n自测得分：${data.score} / 16（${data.grade}）` : null,
+    `\n来源：AI 可见度自测页`
+  ];
+  return lines.filter(Boolean).join('\n');
+}
+
+let lastScore = null, lastGrade = null;
+const _origShowResult = showResult;
+showResult = function () {
+  _origShowResult();
+  lastScore = answers.reduce((a, b) => a + (b || 0), 0);
+  lastGrade = $('#gradeName').textContent.split('：')[0];
+};
+
+$('#submitBtn').addEventListener('click', () => {
+  const name = $('#fName').value.trim();
+  const company = $('#fCompany').value.trim();
+  const interest = $('#fIndustry').value;
+  const contact = $('#fContact').value.trim();
+  const errEl = $('#errContact');
+
+  if (!name) { $('#fName').focus(); toast('请填写称呼'); return; }
+  if (!company) { $('#fCompany').focus(); toast('请填写公司或品牌名'); return; }
+  if (contact.length < 5) {
+    errEl.classList.add('show');
+    $('#fContact').focus();
+    return;
+  }
+  errEl.classList.remove('show');
+
+  const needs = $$('#fNeeds .chip.on').map((c) => c.textContent.trim());
+  const text = buildLead({ name, company, interest, contact, needs, score: lastScore, grade: lastGrade });
+
+  $('#leadCard').textContent = text;
+  $('#wxId').textContent = CONFIG.wechat;
+  if (CONFIG.qrImage) {
+    const qrImg = $('#qrImg');
+    if (qrImg) {
+      qrImg.src = CONFIG.qrImage;
+      $('#qrWrap').classList.add('show');
+    }
+  }
+  $('#formBody').style.display = 'none';
+  $('#formSuccess').classList.add('show');
+
+  $('#formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+$('#copyLead').addEventListener('click', () => {
+  copyText($('#leadCard').textContent).then(() => toast('已复制，去微信粘贴给顾问'));
+});
+
+$('#copyWx').addEventListener('click', () => {
+  copyText(CONFIG.wechat).then(() => toast('微信号已复制'));
+});
+
+$('#formReset').addEventListener('click', () => {
+  $('#formSuccess').classList.remove('show');
+  $('#formBody').style.display = 'block';
+});
+</script>
+</body>
+</html>
