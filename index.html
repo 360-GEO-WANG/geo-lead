@@ -805,6 +805,21 @@ function saveLead(row) {
     return true;
   }).catch((e) => { console.warn('lead save error', String(e && e.message || e)); return false; });
 }
+
+/* 留言实时转发到顾问邮箱（formsubmit.co，首次需点激活邮件） */
+const LEAD_EMAIL = 'wangyunliang@372163.com';
+function emailLead(row) {
+  const payload = Object.assign({
+    _subject: '【GEO获客页】新留言：' + (row.company || row.name || '客户'),
+    _template: 'table',
+    _captcha: 'false'
+  }, row);
+  return fetch('https://formsubmit.co/ajax/' + LEAD_EMAIL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then((r) => r.ok).catch(() => false);
+}
 </script>
 
 <script>
@@ -1074,7 +1089,7 @@ $('#submitBtn').addEventListener('click', () => {
   $('#formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   // 云端留资：后台可查（写失败不影响客户复制咨询单的主流程）
-  saveLead({
+  const leadRow = {
     name: name,
     company: company,
     industry: interest,
@@ -1082,7 +1097,9 @@ $('#submitBtn').addEventListener('click', () => {
     needs: needs.join('、') || null,
     score: lastScore,
     source: (location.host ? location.host : 'local') + (lastGrade ? ' | ' + lastGrade : '')
-  });
+  };
+  saveLead(leadRow);
+  emailLead(leadRow);
 });
 
 $('#copyLead').addEventListener('click', () => {
